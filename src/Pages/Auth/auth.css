@@ -15,6 +15,9 @@
     padding: 30px;
     gap: 10px;
     border-radius: 20px;
+    /* width: 30vw; */
+    align-items: center;
+    justify-content: center;
 }
 
 .auth-box > h1 {
@@ -31,6 +34,7 @@
     outline: none;
     background-color: var(--dark);
     color: var(--white);
+    width: 100%;
 }
 
 .auth-box > button {
@@ -39,14 +43,40 @@
     border: none;
     background-color: var(--white);
     color: var(--black);
+    width: 100%;
+    cursor: pointer;
 }
 
 .auth-links  {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
-.auth-links > a {
+.auth-links > button {
     color: #616161;
     text-decoration: none;
+    background-color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .auth-box {
+        width: 50vw;
+    }
+    .auth-box > h1 {
+        text-align: center;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    .auth-box {
+        width: 100%;
+        
+    }
+    
+    
 }

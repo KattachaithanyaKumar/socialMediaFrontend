@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import Auth from './Pages/Auth/Auth';
-import Home from './Pages/Home/Home'; // Assuming you have a Home component
+import Home from './Pages/Home/Home';
 
 const ProtectedRoute = ({ children }) => {
   const navigate = useNavigate();
@@ -21,14 +21,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/auth" element={<Auth />} />
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
